@@ -1,0 +1,13 @@
+.music-album {
+
+    &__songs-label {
+        text-align: start;
+    }
+
+    ol {
+        font-size: 12px;
+        text-align: center;
+        list-style-position: inside;
+        list-style-type: decimal;
+    }
+}
