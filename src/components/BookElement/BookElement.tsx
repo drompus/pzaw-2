@@ -1,11 +1,5 @@
 import './BookElement.css';
-
-interface BookProps {
-    title: string;
-    year: number;
-    pages: number;
-    coverImage: string;
-}
+import { type BookProps } from '../../types.shared';
 
 export default function BookElement({ title, year, pages, coverImage }: BookProps) {
 

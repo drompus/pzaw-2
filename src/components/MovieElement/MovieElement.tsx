@@ -1,10 +1,5 @@
 import './MovieElement.css';
-
-interface MovieProps {
-    title: string;
-    year: number;
-    posterImage: string;
-}
+import { type MovieProps } from '../../types.shared';
 
 export default function MovieElement({ title, year, posterImage }: MovieProps) {
     return (

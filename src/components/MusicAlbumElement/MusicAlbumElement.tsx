@@ -1,19 +1,5 @@
 import './MusicAlbumElement.scss';
-
-interface Song {
-    title: string;
-    duration: number; // in seconds
-}
-
-interface MusicAlbumProps {
-    name: string;
-    year: number;
-    artist: string;
-    genre: string;
-    songs: Song[];
-
-    coverImage: string;
-}
+import { type MusicAlbumProps } from '../../types.shared';
 
 export default function MusicAlbumElement({ name, year, artist, genre, songs, coverImage }: MusicAlbumProps) {
     return (
@@ -27,7 +13,7 @@ export default function MusicAlbumElement({ name, year, artist, genre, songs, co
 
                 {
                     songs.map(song => (
-                        <li key={song.title}>{song.title} - <b>{Math.round((song.duration / 60 + Number.EPSILON) * 10) / 10} mins</b></li>
+                        <li key={song.title}>{song.title} - <b>{Math.round((song.duration / 60 + Number.EPSILON) * 10) / 10} min</b></li>
                     ))
                 }
             </ol>
