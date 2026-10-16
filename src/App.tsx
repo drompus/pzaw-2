@@ -121,7 +121,7 @@ export default function App() {
 
         <h2>Album muzyczny z największą ilością utworów</h2>
         <section className="music-albums-section">
-            <MusicAlbumElement {...(albums.sort((a, b) => b.songs.length - a.songs.length).slice(0, 1)[0])} />
+            { albums.length > 0 && <MusicAlbumElement {...(albums.sort((a, b) => b.songs.length - a.songs.length).slice(0, 1)[0])} />}
         </section>
       </div>
     </>
